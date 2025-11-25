@@ -37,7 +37,7 @@ def record_until_enter():
     threading.Thread(target=wait_for_enter).start()
     threading.Thread(target=spinner).start()
 
-        while not stop_event.is_set():
+    while not stop_event.is_set():
         try:
             data = stream.read(frames_per_buffer)
             frames.append(data)
